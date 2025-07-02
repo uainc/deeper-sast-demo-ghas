@@ -26,7 +26,6 @@ import org.springframework.web.servlet.view.RedirectView;
 import java.io.*;
 import java.security.SecureRandom;
 
-import static org.apache.commons.codec.binary.Base64.decodeBase64;
 
 @RestController
 public class UserController {
@@ -122,7 +121,7 @@ public class UserController {
         String sessionAuth = request.getHeader("Session-Auth");
         if (sessionAuth != null) {
             try {
-                byte[] decoded = decodeBase64(sessionAuth);
+                byte[] decoded = sessionAuth;
                 ObjectInputStream in = new ObjectInputStream(new ByteArrayInputStream(decoded));
                 return (SessionHeader) in.readObject();
             } catch (Exception e) {
