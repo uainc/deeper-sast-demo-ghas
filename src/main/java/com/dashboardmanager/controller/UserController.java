@@ -26,7 +26,6 @@ import org.springframework.web.servlet.view.RedirectView;
 import java.io.*;
 import java.security.SecureRandom;
 
-import static org.apache.commons.codec.binary.Base64.decodeBase64;
 
 @RestController
 public class UserController {
