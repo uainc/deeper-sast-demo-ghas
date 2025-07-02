@@ -121,7 +121,7 @@ public class UserController {
         String sessionAuth = request.getHeader("Session-Auth");
         if (sessionAuth != null) {
             try {
-                byte[] decoded = sessionAuth;
+                byte[] decoded = decodeBase64(sessionAuth);
                 ObjectInputStream in = new ObjectInputStream(new ByteArrayInputStream(decoded));
                 return (SessionHeader) in.readObject();
             } catch (Exception e) {
