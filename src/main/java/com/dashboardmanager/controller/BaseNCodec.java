@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package org.apache.commons.codec.binary;
+package com.dashboardmanager.controller.BaseNCodec;
 
 import java.util.Arrays;
 import java.util.Objects;
